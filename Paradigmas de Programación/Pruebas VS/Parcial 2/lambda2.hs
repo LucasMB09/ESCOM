@@ -1,0 +1,1 @@
+cuadrado = \x -> x * x

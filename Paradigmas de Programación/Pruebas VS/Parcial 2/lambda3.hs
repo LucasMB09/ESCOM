@@ -1,0 +1,1 @@
+sumLam = (\x y -> x+y)

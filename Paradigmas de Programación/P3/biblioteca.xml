@@ -1,0 +1,10 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca[
+<!ELEMENT biblioteca (libro+)>
+<!ELEMENT libro (titulo,autor,fechapublicacion,genero*)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT fechapublicacion (#PCDATA)>
+
+<!ATTLIST libro fechapublicacion CDATA #IMPLIED>
+]>

@@ -1,0 +1,30 @@
+--Mora Bernal Ulises Leonardo
+import System.Random
+
+bola8Magica :: [String]
+bola8Magica = ["Es cierto"
+              ,"Es decididamente asi"
+              ,"Sin duda","Si definitivamente"
+              ,"Puedes confiar en ello"
+              ,"Como yo lo veo, si"
+              ,"Mas probable"
+              ,"Perspectivas buenas"
+              ,"Las senales apuntan a que si"
+              ,"Si","Respuesta confusa, intenta otra vez"
+              ,"Pregunta de nuevo mas tarde",
+              "Mejor no decirte ahora",
+              "No se puede predecir ahora",
+              "Concentrate y pregunta otra vez"]
+
+randomList :: StdGen ->Double ->Int -> [Int]
+randomList g m n = map truncate (map (*m) (take n (randoms (g) :: [Double])))
+
+generaAleatorio :: StdGen -> String
+generaAleatorio g =
+         let xs = randomList g 15 1      
+         in (bola8Magica !! (xs!!0) )
+           
+main = do
+  g <- newStdGen
+  print $ generaAleatorio g
+  --print $ randomList g 6 2

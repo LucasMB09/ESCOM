@@ -1,0 +1,19 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumno[
+<!ELEMENT CURP (#PCDATA)>
+
+<!ELEMENT nombre (apelidoP,apellidoM,nombres)>
+<!ELEMENT apellidoP (#PCDATA)>
+<!ELEMENT apellidoM (#PCDATA)>
+<!ELEMENT nombres (#PCDATA)>
+
+
+<!ELEMENT historia (asignatura*)>
+<!ELEMENT asignatura (nombreA,calif,fechaA,tipoExamen)>
+<!ELEMENT nombreA (#PCDATA)>
+<!ELEMENT calif (#PCDATA)>
+<!ELEMENT fechaA (#PCDATA)>
+<!ELEMENT tipoExamen (#PCDATA)>
+
+<!ATTLIST CURP nombre CDATA #REQUIRED>
+]>
